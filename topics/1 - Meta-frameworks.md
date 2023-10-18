@@ -15,3 +15,5 @@ Take a look at one or more of these:
 5. ...
 
 And compare these from both a frontend and backend perspective. Look at how you would implement a JSON REST endpoint in those, or how communication between front- and backend works from a single file. 
+
+Perhaps we could build the same (small scale) app in a two of these solutions, and compare them to a similar Java project? A todo app, or perhaps a "Flight booking" app (Example here by Manfred Steyer: https://github.com/angular-architects/flight-app)
