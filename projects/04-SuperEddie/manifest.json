@@ -1,20 +1,24 @@
 {
-    "name": "SuperEddie",
-    "version": "1.0.0",
-    "description": "Automate the creation of your resume",
-    "manifest_version": 3,
-    "author": "Codestar & JSroots R&D Office Day",
-    "action":{
-        "default_popup": "index.html",
-        "default_title": "SuperEddie"
-    },
-  "content_scripts": [{
-    "matches": ["*://eddie.ordina.nl/*"],
-    "js": ["content.js"]
-  }],
+  "name": "SuperEddie",
+  "version": "1.0.0",
+  "description": "Automate the creation of your resume",
+  "manifest_version": 3,
+  "author": "Codestar & JSroots R&D Office Day",
+  "action": {
+    "default_popup": "index.html",
+    "default_title": "SuperEddie"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://eddie.ordina.nl/*"],
+      "js": ["content.js", "user.js"]
+    }
+  ],
   "browser_action": {
     "default_title": "Test Extension"
   },
-
+  "background": {
+    "service_worker": "background.js"
+  },
   "permissions": ["activeTab"]
 }
