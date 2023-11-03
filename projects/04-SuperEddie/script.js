@@ -1,5 +1,14 @@
-const clickMeButton = document.querySelector('#clickMe')
+document.addEventListener(
+  "DOMContentLoaded",
+  function () {
+    var assignmentButton = document.getElementById("checkAssignmentButton");
+    assignmentButton.addEventListener("click", onAssignmentButtonClick, false);
+  },
+  false
+);
 
-clickMeButton.addEventListener('click', () => {
-  console.log('Hello, World!')
-})
+function onAssignmentButtonClick() {
+  const localStorageKoCriteria = JSON.parse(localStorage.getItem("koCriteria"));
+  console.log("🚀 ~ localStorageKoCriteria:", localStorageKoCriteria);
+  alert("button working!");
+}
